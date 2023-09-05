@@ -4120,10 +4120,10 @@ const swiper = () => {
       slideDuplicateActiveClass: 'swiper-slide-duplicate-active',
       slideVisibleClass: 'swiper-slide-visible',
       slideDuplicateClass: 'swiper-slide-duplicate',
-      slideNextClass: 'swiper-slide-next',
-      slideDuplicateNextClass: 'swiper-slide-duplicate-next',
-      slidePrevClass: 'swiper-slide-prev',
-      slideDuplicatePrevClass: 'swiper-slide-duplicate-prev',
+      slideNextClass: 'swiper-slide--next',
+      slideDuplicateNextClass: 'swiper-slide-duplicate--next',
+      slidePrevClass: 'swiper-slide--prev',
+      slideDuplicatePrevClass: 'swiper-slide-duplicate--prev',
       wrapperClass: 'swiper-wrapper',
       // Callbacks
       runCallbacksOnInit: true,
@@ -5724,8 +5724,8 @@ const swiper = () => {
           swiper.originalParams.navigation,
           swiper.params.navigation,
           {
-            nextEl: 'swiper-button-next',
-            prevEl: 'swiper-button-prev',
+            nextEl: 'swiper-button--next',
+            prevEl: 'swiper-button--prev',
           },
         );
         if (!(params.nextEl || params.prevEl)) return;

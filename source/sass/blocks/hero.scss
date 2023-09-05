@@ -1,0 +1,385 @@
+.hero {
+  margin-top: -107px;
+
+  background-color: $color-navy-blue;
+}
+
+.hero__slides {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hero-slide {
+  min-height: 800px;
+  padding-top: 182px;
+  padding-bottom: 78px;
+
+  color: $color-default-white;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @include vp-1199 {
+    min-height: 1024px;
+    padding-top: 173px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding-top: 139px;
+  }
+
+  &--first {
+    background-image: $slider-overlay, url("../img/index/mountain-desktop.png");
+
+    @include retina {
+      background-image: url("../img/index/mountain-desktop@2x.png");
+    }
+
+    @include vp-1199 {
+      background-image: $slider-overlay, url("../img/index/mountain-tablet.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain-tablet@2x.png");
+      }
+    }
+
+    @include vp-767 {
+      background-image: $slider-overlay, url("../img/index/mountain-mobile.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain-mobile@2x.png");
+      }
+    }
+  }
+
+  &--second {
+    background-image: $slider-overlay, url("../img/index/mountain2-desktop.png");
+
+    @include retina {
+      background-image: url("../img/index/mountain2-desktop@2x.png");
+    }
+
+    @include vp-1199 {
+      background-image: $slider-overlay,
+        url("../img/index/mountain2-tablet.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain2-tablet@2x.png");
+      }
+    }
+
+    @include vp-767 {
+      background-image: $slider-overlay,
+        url("../img/index/mountain2-mobile.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain2-mobilep@2x.png");
+      }
+    }
+
+    .hero-slide__info {
+      margin-top: 19%;
+    }
+  }
+
+  &--third {
+    background-image: $slider-overlay, url("../img/index/mountain3-desktop.png");
+
+    @include retina {
+      background-image: url("../img/index/mountain3-desktop@2x.png");
+    }
+
+    @include vp-1199 {
+      background-image: $slider-overlay,
+        url("../img/index/mountain3-tablet.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain3-tablet@2x.png");
+      }
+    }
+
+    @include vp-767 {
+      background-image: $slider-overlay,
+        url("../img/index/mountain3-mobile.png");
+
+      @include retina {
+        background-image: url("../img/index/mountain3-mobile@2x.png");
+      }
+    }
+
+    .hero-slide__info {
+      margin-top: 17.2%;
+    }
+  }
+
+  h3 {
+    position: relative;
+    z-index: 5;
+
+    margin: 0 0 23px;
+
+    font-weight: 800;
+    font-size: 77px;
+    line-height: 77px;
+    letter-spacing: 1px;
+
+    grid-column: 1/-1;
+
+    @include vp-1199 {
+      margin-bottom: 13px;
+
+      font-size: 56px;
+      line-height: 56px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 30px;
+      letter-spacing: normal;
+
+      -webkit-text-stroke: 0;
+    }
+    -webkit-text-stroke: 1px;
+  }
+
+  p {
+    width: 64%;
+    margin: 0 0 37px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+
+    grid-column: 1/2;
+
+    @include vp-1199 {
+      width: 68%;
+      margin-bottom: 27px;
+
+      text-align: center;
+    }
+
+    @include vp-767 {
+      width: unset;
+      margin-bottom: 22px;
+
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+.hero-slide--third p {
+  width: 58%;
+
+  @include vp-1199 {
+    width: 68%;
+  }
+
+  @include vp-767 {
+    width: unset;
+  }
+}
+
+.hero-slide__btn {
+  width: 220px;
+
+  @include vp-1199 {
+    width: 206px;
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    width: 62%;
+  }
+}
+
+.hero-slide__btn,
+.hero-slide__inner {
+  grid-column: 1/2;
+}
+
+.hero-slide__inner {
+  display: flex;
+  margin-top: 21%;
+
+  gap: 10px;
+
+  @include vp-1199 {
+    display: none;
+  }
+
+  b {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.hero-slide__inner-details {
+  position: relative;
+
+  padding: 8px 19px 10px 40px;
+
+  border: 1px solid $white-opacity;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 19px;
+
+    width: 12px;
+    height: 12px;
+    margin: auto 0;
+
+    background-repeat: no-repeat;
+  }
+}
+
+.hero-slide__inner-details svg {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.hero-slide__media {
+  position: relative;
+
+  grid-column: 2/3;
+  grid-row: 2/5;
+
+  @include vp-1199 {
+    transform: none;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &--video {
+    width: 482px;
+    height: 317px;
+
+    transform: translateY(-58px);
+
+    @include vp-1199 {
+      width: 442px;
+      height: 300px;
+      margin-top: 50px;
+    }
+  }
+
+  &--img {
+    width: 410px;
+    height: 317px;
+
+    transform: translateY(-158px);
+
+    @include vp-1199 {
+      width: 442px;
+      margin-top: 34px;
+    }
+  }
+
+  &--audio {
+    width: 340px;
+    height: 220px;
+
+    transform: translateY(-58px);
+
+    @include vp-1199 {
+      margin-top: 69px;
+    }
+  }
+}
+
+.hero-slide__video-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  margin: auto;
+
+  &--play {
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+  }
+
+  svg {
+    transition: fill $trans-default;
+
+    fill: $color-default-white;
+  }
+}
+
+.hero__pagination {
+  position: absolute;
+  bottom: 96px;
+  z-index: 2;
+
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding-right: 120px;
+
+  column-gap: 15px;
+
+  @include vp-1199 {
+    bottom: 89px;
+
+    justify-content: center;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    bottom: 39px;
+
+    column-gap: 12px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+}
+
+.hero__pagination-bullet {
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: background-color $trans-default;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+
+  &--active {
+    background-color: $color-default-white;
+    border: none;
+    cursor: default;
+  }
+
+  &:not(.hero__pagination-bullet--active) {
+    @include hover {
+      background-color: $color-default-white;
+      opacity: 0.5;
+    }
+  }
+}

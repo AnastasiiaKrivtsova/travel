@@ -1,0 +1,147 @@
+.gallery {
+  padding-top: 94px;
+
+  @include vp-1199 {
+    padding-top: 19px;
+  }
+
+  @include vp-767 {
+    padding-top: 7px;
+  }
+}
+
+.gallery__wrapper {
+  margin-bottom: 47px;
+
+  grid-template-columns: 60% auto;
+
+  @include vp-1199 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    margin-bottom: 22px;
+
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 35px;
+
+    @include vp-1199 {
+      margin-bottom: 17px;
+
+      font-size: 25px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+
+      &::after {
+        font-size: 39px;
+        line-height: 39px;
+      }
+    }
+
+    @include vp-767 {
+      margin-bottom: 14px;
+
+      font-size: 22px;
+      line-height: 22px;
+
+      &::after {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+    -webkit-text-stroke: 1px;
+
+    &::after {
+      content: "Фотогалерея";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 55px;
+      color: $color-elephant;
+
+      opacity: 0.03;
+
+      -webkit-text-stroke: 1px;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    grid-column: 1/2;
+
+    @include vp-1199 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 18px;
+
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.gallery__swiper {
+  ul {
+    width: fit-content;
+    max-height: 450px;
+    margin: 0 auto;
+
+    @include vp-767 {
+      max-height: 260px;
+    }
+  }
+
+  li {
+    max-width: fit-content;
+  }
+}
+
+.gallery__slide {
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  gap: 6px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+
+  @include vp-767 {
+    gap: 4px;
+  }
+
+  picture:first-child,
+  img:first-child {
+    grid-row: 1/-1;
+  }
+
+  picture,
+  img {
+    height: 100%;
+  }
+}
+
+.gallery__swiper-buttons {
+  align-self: center;
+
+  @include vp-767 {
+    margin-top: 13px;
+
+    grid-column: 2/3;
+  }
+}

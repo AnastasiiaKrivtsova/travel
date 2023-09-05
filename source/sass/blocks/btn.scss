@@ -1,26 +1,159 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  display: block;
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  user-select: none;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--primary {
+    padding: 21px 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+
+    background-color: $color-navy-blue;
+
+    transition: background-color $trans-default,
+      color $trans-default,
+      box-shadow $trans-default;
+
+    @include vp-767 {
+      padding: 18px 0;
+    }
+
+    @include hover-focus {
+      color: $color-resolution-blue;
+
+      background-color: $color-default-white;
+      box-shadow: 0 0 0 1px $color-resolution-blue inset;
+
+      &:active {
+        color: $color-default-white;
+
+        background-color: $color-resolution-blue;
+      }
+    }
+
+    &:active {
+      color: $color-default-white;
+
+      background-color: $color-resolution-blue;
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-resolution-blue;
+
+      background-color: $color-default-white;
+      outline: none;
+      box-shadow: 0 0 0 1px $color-resolution-blue inset;
+    }
+  }
+
+  &--play {
+    position: absolute;
+    z-index: 2;
+
+    width: 56px;
+    height: 56px;
+    padding: 0;
+
+    background-color: transparent;
+    background-image: url("../img/svg/play-default.svg");
+    background-size: 56px 56px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:disabled {
+      background-image: url("../img/svg/play-disabled.svg");
+    }
+
+    &:hover {
+      background-image: url("../img/svg/play-hover-focus.svg");
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      background-image: url("../img/svg/play-hover-focus.svg");
+      outline: none;
+    }
+
+    &:active {
+      background-image: url("../img/svg/play-active.svg");
+      outline: none;
+    }
+  }
+
+  &--slider {
+    padding: 9px 12px;
+
+    background-color: $color-navy-blue;
+
+    transition: background-color $trans-default,
+      color $trans-default,
+      box-shadow $trans-default;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      box-shadow: 0 0 0 1px $color-resolution-blue inset;
+
+      svg {
+        fill: $color-resolution-blue;
+      }
+
+      &:active {
+        background-color: $color-resolution-blue;
+
+        svg {
+          fill: $color-default-white;
+        }
+      }
+    }
+
+    &_next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      transition: fill $trans-default;
+
+      fill: $color-default-white;
+    }
+
+    &:active {
+      background-color: $color-resolution-blue;
+
+      svg {
+        fill: $color-default-white;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-default-white;
+      outline: none;
+      box-shadow: 0 0 0 1px $color-resolution-blue inset;
+
+      svg {
+        fill: $color-resolution-blue;
+      }
+    }
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.2;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

@@ -1,0 +1,27 @@
+.slider {
+  display: grid;
+
+  grid-template-columns: auto auto;
+}
+
+.slider__btns {
+  display: flex;
+  align-self: start;
+
+  column-gap: 2px;
+
+  justify-self: end;
+}
+
+.slider-swiper {
+  width: 100%;
+
+  grid-column: 1/-1;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}

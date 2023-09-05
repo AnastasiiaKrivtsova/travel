@@ -2,6 +2,8 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
+@import "vendor/leaflet";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -18,11 +20,21 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/wrapper";
+@import "blocks/slider";
 @import "blocks/btn";
-@import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/tours";
+@import "blocks/training";
+@import "blocks/company";
+@import "blocks/reviews";
+@import "blocks/advantages";
+@import "blocks/gallery";
+@import "blocks/form";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/social";
 
 // ---------------------------------
 
