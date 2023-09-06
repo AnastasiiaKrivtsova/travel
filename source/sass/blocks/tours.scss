@@ -168,6 +168,12 @@
   }
 }
 
+.tours__swiper-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
 .tours__card {
   position: absolute;
   top: 0;

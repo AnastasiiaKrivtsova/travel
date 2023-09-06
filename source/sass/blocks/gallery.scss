@@ -145,3 +145,9 @@
     grid-column: 2/3;
   }
 }
+
+.gallery__swiper-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}

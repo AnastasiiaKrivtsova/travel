@@ -119,12 +119,6 @@
       }
     }
 
-    &_next {
-      svg {
-        transform: rotate(180deg);
-      }
-    }
-
     svg {
       transition: fill $trans-default;
 

@@ -232,3 +232,9 @@
     display: none;
   }
 }
+
+.advantages__swiper-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}

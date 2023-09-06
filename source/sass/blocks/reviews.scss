@@ -78,6 +78,12 @@
   }
 }
 
+.reviews__swiper-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
 .reviews__card {
   display: grid;
   width: 790px;
