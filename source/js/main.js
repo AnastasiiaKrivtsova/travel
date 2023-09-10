@@ -6,6 +6,8 @@ import {initVideo} from './blocks/init-video';
 import {initMobileMenu} from './blocks/menu';
 import {initAdvantagesSlider} from './blocks/advantages-swiper';
 import {setMap} from './blocks/map';
+import {initHeroMargin} from './blocks/init-hero';
+
 
 // ---------------------------------
 
@@ -13,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   window.addEventListener('load', () => {
     initMobileMenu();
+    initHeroMargin();
     initSwiper();
     initVideo();
     initAudio();
@@ -26,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
   });
 });
+
 
 // ---------------------------------
 

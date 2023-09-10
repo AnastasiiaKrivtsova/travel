@@ -88,6 +88,7 @@
   display: grid;
   width: 790px;
   height: 100%;
+  object-fit: cover;
   padding: 20px 40px 20px 20px;
 
   column-gap: 30px;
@@ -103,13 +104,20 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    object-fit: cover;
+    width: 100%;
     height: unset;
     min-height: 466px;
     padding: 20px;
 
     grid-template-columns: auto;
     grid-template-rows: max-content auto;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -137,6 +145,7 @@
 
     font-size: 14px;
     line-height: 22px;
+    margin-bottom: 15px;
 
     @include vp-1199 {
       font-size: 12px;
@@ -150,7 +159,6 @@
 }
 
 .reviews__card-details {
-  margin-top: auto;
   margin-bottom: 16px;
 
   @include vp-1199 {
