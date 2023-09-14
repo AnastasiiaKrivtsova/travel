@@ -1,0 +1,183 @@
+.company {
+  position: relative;
+
+  padding-bottom: 107px;
+
+  background-image: url("../img/index/lake-desktop.png");
+  background-repeat: no-repeat;
+  background-position: left 56%;
+  background-size: 56%;
+
+  @include retina {
+    background-image: url("../img/index/lake-desktop@2x.png");
+  }
+
+  @include vp-1199 {
+    padding-bottom: 23px;
+
+    background-image: url("../img/index/lake-tablet.png");
+    background-position: left 50%;
+    background-size: 62%;
+
+    @include retina {
+      background-image: url("../img/index/lake-tablet@2x.png");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/index/lake-mobile.png");
+    background-position: top left;
+    background-size: 100%;
+
+    @include retina {
+      background-image: url("../img/index/lake-mobile@2x.png");
+    }
+  }
+
+  @media (min-width: 1750px) {
+    background-size: contain;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -22%;
+    right: 0;
+
+    width: 50%;
+    height: 51%;
+
+    background-image: url("../img/index/company-clouds.png");
+    background-repeat: no-repeat;
+    background-position-x: 98px;
+    background-size: 87% 100%;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 840px) and (max-width: 1199px) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 1050px) and (max-width: 1199px) {
+    padding-bottom: 185px;
+  }
+}
+
+.company__wrapper {
+  width: 48.8%;
+  margin-left: auto;
+  padding-top: 80px;
+
+  @include vp-1199 {
+    width: 48%;
+    padding-top: 44px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 154%;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    margin-bottom: 53px;
+
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 35px;
+
+    @include vp-1199 {
+      margin-bottom: 21px;
+
+      font-size: 25px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+
+      &::after {
+        font-size: 39px;
+        line-height: 39px;
+      }
+    }
+
+    @include vp-767 {
+      margin-bottom: 27px;
+
+      font-size: 22px;
+      line-height: 22px;
+
+      &::after {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+    -webkit-text-stroke: 1px;
+
+    &::after {
+      content: "О нас";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 55px;
+      color: $color-elephant;
+
+      opacity: 0.03;
+
+      -webkit-text-stroke: 1px;
+
+      @include vp-1199 {
+        font-size: 40px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 7px;
+
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 35px;
+
+    @include vp-1199 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include vp-767 {
+      line-height: 20px;
+    }
+
+    &:first-of-type {
+      margin-bottom: 25px;
+
+      @include vp-1199 {
+        margin-bottom: 20px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 33px;
+      }
+    }
+  }
+}

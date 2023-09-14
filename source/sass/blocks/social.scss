@@ -1,0 +1,89 @@
+.social {
+  margin-top: -4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include vp-1199 {
+    margin-top: 15px;
+  }
+
+  @include vp-767 {
+    margin-top: 26px;
+    justify-content: left;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 15px;
+
+    @include vp-767 {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.social__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  outline: 1px solid rgba(45, 56, 63, 0.3);
+
+  transition: outline $trans-default, background-color $trans-default;
+
+  @include hover-focus {
+    outline-color: $color-elephant;
+
+    &:active {
+      background-color: $color-navy-blue;
+      outline: none;
+
+      svg {
+        fill: $color-default-white;
+      }
+    }
+  }
+
+  svg {
+    transition: fill $trans-default;
+
+    fill: $color-elephant;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border: 1px solid rgba(45, 56, 63, 1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid rgba(45, 56, 63, 1);
+    outline: none;
+  }
+
+  &:active {
+    color: $color-default-white;
+
+    background-color: $color-navy-blue;
+    border: 1px solid $color-navy-blue;
+
+    fill: $color-default-white;
+  }
+}

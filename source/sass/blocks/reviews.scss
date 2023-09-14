@@ -1,0 +1,206 @@
+.reviews {
+
+  @include vp-1199 {
+    padding-top: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 35px;
+  }
+}
+
+.reviews__wrapper {
+  h2 {
+    margin-top: 13px;
+    position: relative;
+    z-index: 2;
+
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 35px;
+
+    @include vp-1199 {
+      font-size: 25px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+
+      &::after {
+        font-size: 39px;
+        line-height: 39px;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+      margin-top: 6px;
+
+      &::after {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+    -webkit-text-stroke: 1px;
+
+    &::after {
+      content: "Отзывы";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 55px;
+      color: $color-elephant;
+
+      opacity: 0.03;
+
+      -webkit-text-stroke: 1px;
+
+      @include vp-1199 {
+        font-size: 40px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.reviews__swiper {
+  padding-top: 17px;
+  padding-bottom: 40px;
+  padding-left: 121px;
+
+  @include vp-1199 {
+    padding-top: 10px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding: 19px 15px 40px;
+  }
+
+  li {
+    width: unset;
+  }
+}
+
+.reviews__swiper-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__card {
+  display: grid;
+  width: 790px;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 40px 20px 20px;
+
+  column-gap: 30px;
+
+  background-color: $color-default-white;
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+
+  grid-template-columns: max-content auto;
+
+  @include vp-1199 {
+    width: 560px;
+    padding: 10px 30px 20px 20px;
+  }
+
+  @include vp-767 {
+    object-fit: cover;
+    width: 100%;
+    height: unset;
+    min-height: 466px;
+    padding: 20px;
+    width: 290px;
+
+    grid-template-columns: auto;
+    grid-template-rows: max-content auto;
+  }
+
+  img {
+    @media (min-width: 321px) and (max-width: $vp-1200) {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.reviews__card-inner {
+  margin-top: 15px;
+
+  @include vp-1199 {
+    margin-top: 3px;
+  }
+
+  @include vp-767 {
+    margin-top: 21px;
+  }
+
+  blockquote {
+    display: grid;
+    height: 100%;
+    margin: 0;
+
+    grid-template-rows: auto auto 1fr;
+  }
+
+  p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+
+    @include vp-1199 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.reviews__card-details {
+  margin-top: 2%;
+
+  @include vp-1199 {
+    margin-top: 3.7%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+    margin-top: 0.01%;
+  }
+
+  cite {
+    display: flex;
+    flex-direction: column;
+
+    font-style: normal;
+
+    row-gap: 8px;
+  }
+
+  b {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 13px;
+
+    @include vp-1199 {
+      font-size: 12px;
+    }
+  }
+
+  span {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
