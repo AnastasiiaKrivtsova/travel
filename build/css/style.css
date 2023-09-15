@@ -3219,9 +3219,6 @@ button,
 .training__card {
   display: -ms-grid;
   display: grid;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   height: 100%;
   min-height: 378px;
   padding: 20px;
@@ -4160,7 +4157,6 @@ button,
   margin-left: 87px;
   gap: 14px;
   padding: 0;
-  margin-left: 87px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4214,16 +4210,6 @@ button,
 
 .footer__link:disabled {
   opacity: 0.58;
-}
-
-.footer__logo-link {
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-}
-
-.footer__logo-link:focus,
-.footer__logo-link:focus-visible {
-  outline-color: #000000;
 }
 
 .footer__logo-link {
@@ -5724,7 +5710,6 @@ button,
     width: 290px;
     max-height: 502px;
     height: 100%;
-    width: 290px;
     padding: 20px;
     -ms-grid-columns: auto;
     grid-template-columns: auto;
@@ -5974,10 +5959,6 @@ button,
   .footer__links li {
     margin: 0;
     margin-bottom: 5px;
-  }
-
-  .footer__link {
-    margin-bottom: 50px;
   }
 
   .footer__link {
@@ -6232,10 +6213,6 @@ button,
 
   .footer__link:hover:not(.focus-visible):active::after {
     background-color: rgba(255, 255, 255, 0);
-  }
-
-  .footer__logo-link:hover:not(.focus-visible) {
-    opacity: 0.7;
   }
 
   .footer__logo-link:hover:not(.focus-visible) {
