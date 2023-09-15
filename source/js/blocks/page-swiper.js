@@ -2,6 +2,8 @@ import Swiper from '../vendor/swiper';
 
 export const initSwiper = () => {
   const heroSwiper = new Swiper('.hero__swiper', {
+    loop: true,
+
     pagination: {
       el: '.hero__pagination',
       type: 'bullets',
@@ -136,14 +138,6 @@ export const initSwiper = () => {
     const videoOrAudio = previousSlide.querySelector('video, audio');
     if (videoOrAudio) {
       videoOrAudio.pause();
-    }
-  });
-
-  heroSwiper.on('slideChangeTransitionEnd', () => {
-    const currentSlide = heroSwiper.slides[heroSwiper.activeIndex];
-    const videoOrAudio = currentSlide.querySelector('video, audio');
-    if (videoOrAudio) {
-      videoOrAudio.play();
     }
   });
 };

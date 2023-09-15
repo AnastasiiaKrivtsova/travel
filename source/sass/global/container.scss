@@ -26,12 +26,12 @@
       flex-direction: column;
       align-items: center;
       margin-top: 32px;
-      padding: 0 45px 80px;
+      padding: 0 45px 55px;
     }
 
     @include vp-767 {
       margin-top: 6px;
-      padding: 0 15px 74px;
+      padding: 0 15px 52px;
     }
   }
 }

@@ -5,7 +5,7 @@
   border-top: 1px solid rgba(45, 56, 63, 0.2);
 
   @include vp-1199 {
-    padding-top: 44px;
+    padding-top: 34px;
   }
 
   @include vp-767 {
@@ -55,42 +55,66 @@
     margin-top: 22px;
   }
 
+  @media (min-width: $vp-1200) and (max-width: $vp-1440) {
+    margin-left: 0;
+  }
+
   ul {
+    list-style-type: none;
+    margin-left: 87px;
+    gap: 14px;
+    padding: 0;
+    margin-left: 87px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    transform: translateY(4px);
-
-    gap: 4.4%;
+    max-width: 700px;
 
     @include vp-1199 {
-      justify-content: unset;
-
-      font-size: 14px;
-      line-height: 14px;
-
-      transform: none;
-
-      gap: 20px;
+      margin-left: auto;
+      max-width: 510px;
+      gap: 4px
     }
 
     @include vp-767 {
-      display: grid;
+      max-width: none;
+      width: 100%;
+      display: block;
+      margin: 0;
+      font-size: 14px;
+      margin-top: -2px;
+      margin-bottom: 10px;
+      column-count: 2;
+      gap: 23px;
+    }
 
-      column-gap: 48px;
-      row-gap: 16px;
-
-      grid-auto-flow: column;
-      grid-template-columns: auto auto;
-      grid-template-rows: repeat(3, auto);
-
+    @media (min-width: $vp-1200) and (max-width: 1439px) {
+      margin-left: 0;
+      gap: 10px;
     }
   }
 }
+
+.footer__links li {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 19px;
+
+      @include vp-1199 {
+        margin-right: 7px;
+      }
+
+      @include vp-767 {
+        margin-right: 0;
+      }
+    }
+
+    @include vp-767 {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
 
 .footer__link {
   position: relative;
@@ -139,6 +163,12 @@
 
   @include vp-767 {
     margin-bottom: 50px;
+  }
+}
+
+.footer__link {
+  @include vp-767 {
+    margin-bottom: 5px;
   }
 }
 
