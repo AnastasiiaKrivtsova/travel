@@ -95,7 +95,7 @@
   width: 790px;
   height: 100%;
   object-fit: cover;
-  padding: 0 40px 20px 20px;
+  padding: 20px 40px 20px 20px;
 
   column-gap: 30px;
 
@@ -106,28 +106,19 @@
 
   @include vp-1199 {
     width: 560px;
-    padding: 10px 30px 20px 20px;
-    object-fit: cover;
+    padding: 30px 30px 20px 20px;
   }
 
   @include vp-767 {
-    object-fit: cover;
+    width: 290px;
     height: unset;
     min-height: 466px;
+    width: 290px;
     padding: 20px;
-
 
     grid-template-columns: auto;
     grid-template-rows: max-content auto;
   }
-}
-
-.reviews__card img {
-  @include vp-1199 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   }
 }
 
 .reviews__card-inner {
