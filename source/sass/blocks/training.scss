@@ -166,11 +166,13 @@
     object-fit: cover;
 
     margin: 0 auto;
+
     @include vp-1199 {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+
   }
 
   h4 {

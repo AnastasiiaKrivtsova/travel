@@ -107,27 +107,27 @@
   @include vp-1199 {
     width: 560px;
     padding: 10px 30px 20px 20px;
+    object-fit: cover;
   }
 
   @include vp-767 {
     object-fit: cover;
-    width: 100%;
     height: unset;
     min-height: 466px;
     padding: 20px;
-    width: 290px;
+
 
     grid-template-columns: auto;
     grid-template-rows: max-content auto;
   }
+}
 
-  img {
-    @media (min-width: 321px) and (max-width: $vp-1200) {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
+.reviews__card img {
+  @include vp-1199 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
 }
 
 .reviews__card-inner {

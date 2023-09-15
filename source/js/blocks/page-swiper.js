@@ -85,6 +85,15 @@ export const initSwiper = () => {
     spaceBetween: 30,
     slidesPerView: 'auto',
 
+    768: {
+      spaceBetween: 30,
+    slidesPerView: 'auto',
+    },
+
+    320: {
+      slidesPerView: 1,
+    },
+
     navigation: {
       nextEl: '.reviews__swiper-btn--next',
       prevEl: '.reviews__swiper-btn--prev',
