@@ -19,56 +19,45 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="header__wrapper">
-        <nav class="header-nav header-nav--closed header-nav--nojs">
-          <button class="header-nav__toggle" type="button" aria-label="Открыть/закрыть меню.">
-            <svg class="header-nav__toggle-icon header-nav__toggle-icon--closed" width="22" height="22">
-              <use xlink:href="./img/sprite/sprite.svg#menu"></use>
-            </svg>
-            <svg class="header-nav__toggle-icon header-nav__toggle-icon--is-open" width="22" height="22">
-              <use xlink:href="./img/sprite/sprite.svg#cross"></use>
-            </svg>
-          </button>
-          <div class="header-nav__logo">
-            <a class="header-nav__logo-link header-nav__logo-link--light" href="index.html">
-              <picture>
-                <source media="(max-width: 767px)" width="112" height="34" srcset="./img/svg/logo-mobile.svg">
-                <source media="(max-width: 1199px)" width="144" height="44" srcset="./img/svg/logo-tablet.svg">
-                <img src="./img/svg/logo-desktop.svg" width="205" height="60" alt="Логотип LifeTour.">
-              </picture>
+    <header class="header" data-name="header">
+      <div class="header__inner">
+        <div class="container">
+          <div class="header__wrapper">
+            <button class="header__burger-btn" type="button" aria-label="Открыть/закрыть меню." data-name="burger-btn">
+              <span class="header__burger-line"></span>
+            </button>
+            <a class="header__logo-link" href="index.html" aria-current="page" data-name="header-logo">
+              <svg width="205" height="62">
+                <use href="./img/sprite.svg#logo-desktop" />
+              </svg>
             </a>
-            <a class="header-nav__logo-link header-nav__logo-link--dark" href="index.html">
-              <picture>
-                <source media="(max-width: 767px)" width="112" height="34" srcset="./img/svg/logo-dark-mobile.svg">
-                <img src="./img/svg/logo-dark-tablet.svg" width="144" height="44" alt="Логотип LifeTour.">
-              </picture>
-            </a>
+            <nav class="header__nav" data-name="header-nav">
+              <ul>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#tours">Туры</a>
+                </li>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#training">Обучение</a>
+                </li>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#company">О нас</a>
+                </li>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#reviews">Отзывы</a>
+                </li>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#gallery">Фотографии</a>
+                </li>
+                <li>
+                  <a data-name="header-link" class="header__nav-link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__phone-link">
+              <a href="tel:+78007253232">8&nbsp;800&nbsp;725&nbsp;32&nbsp;32</a>
+            </div>
           </div>
-          <div class="header-nav__phone">
-            <a href="tel:+78007253232">8&nbsp;800&nbsp;725&nbsp;32&nbsp;32</a>
-          </div>
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a href="#сatalog">Туры</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#training">Обучение</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#company">О нас</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#reviews">Отзывы</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#gallery">Фотографии</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -153,6 +142,7 @@
                   и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
                 <a class="hero-slide__btn btn btn--primary" href="#">Смотреть тур</a>
                 <div class="hero-slide__media hero-slide__media--audio" data-name="audio-container">
+                  <iframe frameborder="0" style="border:none;width:340px;height:220px;" width="340" height="220" src="https://music.yandex.ru/iframe/#track/112912322/25474374">Слушайте <a href='https://music.yandex.ru/album/25474374/track/112912322'>001. Конец фронтенда, одинаковые фреймворки и логические свойства</a> на Яндекс Музыке</iframe>
                 </div>
                 <div class="hero-slide__inner">
                   <div class="hero-slide__inner-details hero-slide__inner-details--date">
@@ -964,7 +954,7 @@
                   <use href="./img/sprite/sprite.svg#slider-arrow" />
                 </svg>
               </button>
-              <button class="reviews__swiper-btn reviews__swiper-btn--next btn btn--slider btn--slider_next"
+              <button class="reviews__swiper-btn reviews__swiper-btn--next btn btn--slider"
                 type="button" aria-label="Переход вперёд.">
                 <svg width="14" height="9">
                   <use href="./img/sprite/sprite.svg#slider-arrow" />
@@ -1139,10 +1129,10 @@
           <div class="advantages__swiper swiper">
             <ul class="swiper__wrapper">
               <li class="swiper__slide">
-                <div class="advantages__card">
+                <div class="advantages__card advantages__card-first">
                   <picture>
-                    <source media="(max-width: 1200px)" srcset="./img/svg/icon-tablet.svg" width="48" height="48">
                     <source media="(max-width: 768px)" srcset="./img/svg/icon-mobile.svg" width="42" height="42">
+                    <source media="(max-width: 1200px)" srcset="./img/svg/icon-tablet.svg" width="48" height="48">
                     <img src="./img/svg/icon-desktop.svg" width="54" height="54" alt="Эмблема безопасности.">
                   </picture>
                   <h3>Безопасность и охрана</h3>
@@ -1152,10 +1142,10 @@
                 </div>
               </li>
               <li class="swiper__slide">
-                <div class="advantages__card">
+                <div class="advantages__card advantages__card-second">
                   <picture>
-                    <source media="(max-width: 1200px)" srcset="./img/svg/crown-tablet.svg" width="48" height="48">
                     <source media="(max-width: 768px)" srcset="./img/svg/crown-mobile.svg" width="42" height="42">
+                    <source media="(max-width: 1200px)" srcset="./img/svg/crown-tablet.svg" width="48" height="48">
                     <img src="./img/svg/crown-desktop.svg" width="54" height="54" alt="Эмблема короны.">
                   </picture>
                   <h3>Экспертиза и знания</h3>
@@ -1165,10 +1155,10 @@
                 </div>
               </li>
               <li class="swiper__slide">
-                <div class="advantages__card">
+                <div class="advantages__card advantages__card-third">
                   <picture>
-                    <source media="(max-width: 1200px)" srcset="./img/svg/boot-tablet.svg" width="48" height="48">
                     <source media="(max-width: 768px)" srcset="./img/svg/boot-mobile.svg" width="42" height="42">
+                    <source media="(max-width: 1200px)" srcset="./img/svg/boot-tablet.svg" width="48" height="48">
                     <img src="./img/svg/boot-desktop.svg" width="54" height="54" alt="Эмблема ботинка.">
                   </picture>
                   <h3>Оборудование и снаряжение</h3>
@@ -1178,10 +1168,10 @@
                 </div>
               </li>
               <li class="swiper__slide">
-                <div class="advantages__card">
+                <div class="advantages__card advantages__card-fourth">
                   <picture>
-                    <source media="(max-width: 1200px)" srcset="./img/svg/map-tablet.svg" width="48" height="48">
                     <source media="(max-width: 768px)" srcset="./img/svg/map-mobile.svg" width="42" height="42">
+                    <source media="(max-width: 1200px)" srcset="./img/svg/map-tablet.svg" width="48" height="48">
                     <img src="./img/svg/map-desktop.svg" width="54" height="54" alt="Эмблема карты.">
                   </picture>
                   <h3>Индивидуальные маршруты</h3>
@@ -1191,10 +1181,10 @@
                 </div>
               </li>
               <li class="swiper__slide">
-                <div class="advantages__card">
+                <div class="advantages__card advantages__card-fifth">
                   <picture>
-                    <source media="(max-width: 1200px)" srcset="./img/svg/flower-tablet.svg" width="48" height="48">
                     <source media="(max-width: 768px)" srcset="./img/svg/flower-mobile.svg" width="42" height="42">
+                    <source media="(max-width: 1200px)" srcset="./img/svg/flower-tablet.svg" width="48" height="48">
                     <img src="./img/svg/flower-desktop.svg" width="54" height="54" alt="Эмблема кувшинки.">
                   </picture>
                   <h3>Бережное отношение к&nbsp;природе</h3>
@@ -1235,7 +1225,7 @@
                   <use href="./img/sprite/sprite.svg#slider-arrow" />
                 </svg>
               </button>
-              <button class="gallery__swiper-btn gallery__swiper-btn--next btn btn--slider btn--slider_next"
+              <button class="gallery__swiper-btn gallery__swiper-btn--next btn btn--slider"
                 type="button" aria-label="Переход вперёд.">
                 <svg width="14" height="9">
                   <use href="./img/sprite/sprite.svg#slider-arrow" />
@@ -1263,29 +1253,29 @@
                 </picture>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/photos/photo2-mobile.webp 1x, ./img/photos/photo2-mobile@2x.webp 2x" width="159"
-                    height="259">
+                    srcset="./img/photos/photo2-mobile.webp 1x, ./img/photos/photo2-mobile@2x.webp 2x" width="172"
+                    height="103">
                   <source type="image/webp"
-                    srcset="./img/photos/photo2-desktop.webp 1x, ./img/photos/photo2-desktop@2x.webp 2x" width="275"
-                    height="449">
+                    srcset="./img/photos/photo2-desktop.webp 1x, ./img/photos/photo2-desktop@2x.webp 2x" width="298"
+                    height="179">
                   <source media="(max-width: 767px)"
-                    srcset="./img/photos/photo2-mobile.png 1x, ./img/photos/photo2-mobile@2x.png 2x" width="159"
-                    height="259">
-                  <img src="./img/photos/photo2-desktop.png" srcset="./img/photos/photo2-desktop@2x.png" width="275"
-                    height="449" alt="Фото из галереи." loading="lazy">
+                    srcset="./img/photos/photo2-mobile.png 1x, ./img/photos/photo2-mobile@2x.png 2x" width="172"
+                    height="103">
+                  <img src="./img/photos/photo2-desktop.png" srcset="./img/photos/photo2-desktop@2x.png" width="298"
+                    height="179" alt="Фото из галереи." loading="lazy">
                 </picture>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/photos/photo3-mobile.webp 1x, ./img/photos/photo3-mobile@2x.webp 2x" width="159"
-                    height="259">
+                    srcset="./img/photos/photo3-mobile.webp 1x, ./img/photos/photo3-mobile@2x.webp 2x" width="172"
+                    height="153">
                   <source type="image/webp"
-                    srcset="./img/photos/photo3-desktop.webp 1x, ./img/photos/photo3-desktop@2x.webp 2x" width="275"
-                    height="449">
+                    srcset="./img/photos/photo3-desktop.webp 1x, ./img/photos/photo3-desktop@2x.webp 2x" width="298"
+                    height="265">
                   <source media="(max-width: 767px)"
-                    srcset="./img/photos/photo3-mobile.png 1x, ./img/photos/photo3-mobile@2x.png 2x" width="159"
-                    height="259">
-                  <img src="./img/photos/photo3-desktop.png" srcset="./img/photos/photo3-desktop@2x.png" width="275"
-                    height="449" alt="Фото из галереи." loading="lazy">
+                    srcset="./img/photos/photo3-mobile.png 1x, ./img/photos/photo3-mobile@2x.png 2x" width="172"
+                    height="153">
+                  <img src="./img/photos/photo3-desktop.png" srcset="./img/photos/photo3-desktop@2x.png" width="298"
+                    height="265" alt="Фото из галереи." loading="lazy">
                 </picture>
               </div>
             </li>
@@ -1306,29 +1296,72 @@
                 </picture>
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
-                    srcset="./img/photos/photo1-mobile.webp 1x, ./img/photos/photo1-mobile@2x.webp 2x" width="159"
-                    height="259">
+                    srcset="./img/photos/photo2-mobile.webp 1x, ./img/photos/photo2-mobile@2x.webp 2x" width="172"
+                    height="103">
                   <source type="image/webp"
-                    srcset="./img/photos/photo5-desktop.webp 1x, ./img/photos/photo5-desktop@2x.webp 2x" width="275"
-                    height="449">
+                    srcset="./img/photos/photo5-desktop.webp 1x, ./img/photos/photo5-desktop@2x.webp 2x" width="298"
+                    height="179">
                   <source media="(max-width: 767px)"
-                    srcset="./img/photos/photo1-mobile.png 1x, ./img/photos/photo1-mobile@2x.png 2x" width="159"
-                    height="259">
-                  <img src="./img/photos/photo5-desktop.png" srcset="./img/photos/photo5-desktop@2x.png" width="275"
-                    height="449" alt="Фото из галереи." loading="lazy">
+                    srcset="./img/photos/photo2-mobile.png 1x, ./img/photos/photo2-mobile@2x.png 2x" width="172"
+                    height="103">
+                  <img src="./img/photos/photo5-desktop.png" srcset="./img/photos/photo5-desktop@2x.png" width="298"
+                    height="179" alt="Фото из галереи." loading="lazy">
                 </picture>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/photos/photo3-mobile.webp 1x, ./img/photos/photo3-mobile@2x.webp 2x" width="172"
+                    height="153">
+                  <source type="image/webp"
+                    srcset="./img/photos/photo6-desktop.webp 1x, ./img/photos/photo6-desktop@2x.webp 2x" width="298"
+                    height="265">
+                  <source media="(max-width: 767px)"
+                    srcset="./img/photos/photo3-mobile.png 1x, ./img/photos/photo3-mobile@2x.png 2x" width="172"
+                    height="153">
+                  <img src="./img/photos/photo6-desktop.png" srcset="./img/photos/photo6-desktop@2x.png" width="298"
+                    height="265" alt="Фото из галереи." loading="lazy">
+                </picture>
+              </div>
+            </li>
+            <li class="swiper__slide" tabindex="0">
+              <div class="gallery__slide">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="./img/photos/photo1-mobile.webp 1x, ./img/photos/photo1-mobile@2x.webp 2x" width="159"
                     height="259">
                   <source type="image/webp"
-                    srcset="./img/photos/photo6-desktop.webp 1x, ./img/photos/photo6-desktop@2x.webp 2x" width="275"
+                    srcset="./img/photos/photo1-desktop.webp 1x, ./img/photos/photo1-desktop@2x.webp 2x" width="275"
                     height="449">
                   <source media="(max-width: 767px)"
                     srcset="./img/photos/photo1-mobile.png 1x, ./img/photos/photo1-mobile@2x.png 2x" width="159"
                     height="259">
-                  <img src="./img/photos/photo6-desktop.png" srcset="./img/photos/photo6-desktop@2x.png" width="275"
+                  <img src="./img/photos/photo1-desktop.png" srcset="./img/photos/photo1-desktop@2x.png" width="275"
                     height="449" alt="Фото из галереи." loading="lazy">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/photos/photo2-mobile.webp 1x, ./img/photos/photo2-mobile@2x.webp 2x" width="172"
+                    height="103">
+                  <source type="image/webp"
+                    srcset="./img/photos/photo2-desktop.webp 1x, ./img/photos/photo2-desktop@2x.webp 2x" width="298"
+                    height="179">
+                  <source media="(max-width: 767px)"
+                    srcset="./img/photos/photo2-mobile.png 1x, ./img/photos/photo2-mobile@2x.png 2x" width="172"
+                    height="103">
+                  <img src="./img/photos/photo2-desktop.png" srcset="./img/photos/photo2-desktop@2x.png" width="298"
+                    height="179" alt="Фото из галереи." loading="lazy">
+                </picture>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="./img/photos/photo3-mobile.webp 1x, ./img/photos/photo3-mobile@2x.webp 2x" width="172"
+                    height="153">
+                  <source type="image/webp"
+                    srcset="./img/photos/photo3-desktop.webp 1x, ./img/photos/photo3-desktop@2x.webp 2x" width="298"
+                    height="265">
+                  <source media="(max-width: 767px)"
+                    srcset="./img/photos/photo3-mobile.png 1x, ./img/photos/photo3-mobile@2x.png 2x" width="172"
+                    height="153">
+                  <img src="./img/photos/photo3-desktop.png" srcset="./img/photos/photo3-desktop@2x.png" width="298"
+                    height="265" alt="Фото из галереи." loading="lazy">
                 </picture>
               </div>
             </li>
@@ -1359,9 +1392,8 @@
           <p>Заполните форму и&nbsp;наш оператор свяжется с&nbsp;вами для консультации.</p>
           <div class="form__wrapper" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post">
-              <div class="form__input-wrapper" data-required data-validate-type="text"
-                data-limitation="letters-and-digit">
-                <input type="text" name="name" aria-label="Имя." placeholder="Как к вам обращаться?" required>
+              <div class="form__input-wrapper" data-validate-type="text" data-limitation="name" data-on-input-validate data-required>
+                <input type="text" name="name" aria-label="Имя." placeholder="Как к вам обращаться?" pattern="[a-zA-Z-]+" required>
               </div>
               <div class="form__input-wrapper" data-required data-validate-type="phone">
                 <input type="tel" name="phone" aria-label="Телефон." placeholder="Телефон" required>
